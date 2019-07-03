@@ -1,21 +1,40 @@
-import Twit from 'twit';
 import config from './config';
+import Twit from 'twit';
+const bot = new Twit(config.key);
 
-const bot = new Twit(config);
+// import tweet from './api/tweet';
 
 
-// Post a tweet
-bot.post('statuses/update', 
-    {
-        status: 'bot working 👎',
-        in_reply_to_status_id:
-    }, 
-    (err, data, response) => {
-    
-    if (err) {
-        console.log(err);
-    } else { 
-        console.log(`Tweet =>: ${data.text} `)
+
+// Like a tweet
+
+let params = {
+    q: '#reactjs',
+    result_type: 'recent',
+    lang: 'en',
+    count: 1
+};
+
+bot.get('search/tweets', params, 
+    (err, data) => {
+        let tweet = data
+        if (err) {
+            console.log(err)
+        } else {
+            console.log(data.statuses)
+        }
     }
-    console.log(data);
-})
+)
+
+// bot.post('favorites/create', 
+//     {
+//         id: '974'
+//     },
+//     (err, data, response) => {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             console.log(`I just liked => ${data.text}`)
+//         }
+//     }    
+// )
