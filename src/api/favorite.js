@@ -1,6 +1,7 @@
 const twit = require("twit");
 const config = require("../config");
 const bot = new twit(config.key);
+const random = require('./random');
 
 const favorite =  () => {
 
@@ -12,9 +13,14 @@ const favorite =  () => {
 
 
 	// Search for particular tweets
-    bot.get('search/tweets', params, (err, data) => {
-		console.log(data.text)
+	bot.get('search/tweets', params, 
+		(err, data) => {
+		
 		let tweets = data.statuses;
+
+		// Pick a random tweet
+		let tweet = random(tweets);
+		console.log(tweet.id_str);
 
 		if (err) {
 			console.error(`Error: ${error}`)
@@ -24,7 +30,7 @@ const favorite =  () => {
 
 			bot.post('favorites/create', 
 			{
-				id: tweets.id_str
+				id: tweet.id_str
 			},
 		
 			(err, data) => {
