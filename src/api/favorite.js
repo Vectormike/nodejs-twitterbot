@@ -6,7 +6,7 @@ const random = require('./random');
 const favorite =  () => {
 
 	let params = {
-		q: '#reactjs',
+		q: '#reactjs OR React #javaScript OR javaScript OR nodejs OR #nodejs OR express OR #express OR Redux OR #Redux',
 		result_type: 'recent',
 		lang: 'en'
 	}
@@ -51,6 +51,6 @@ const favorite =  () => {
 module.exports = favorite;
 
 // Search for particular tweets =>
-//
+// Pick at random
 // Favorite/like tweets 
 
