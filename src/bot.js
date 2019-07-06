@@ -5,9 +5,9 @@ const bot = new twit(config.key);
 
 //Api
 const favorite = require("./api/favorite");
+setInterval(favorite, 1000)
 
-favorite();
-// import tweet from './api/tweet';
+
 
 
 
