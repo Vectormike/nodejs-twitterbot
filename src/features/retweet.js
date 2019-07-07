@@ -6,9 +6,8 @@ const random = require('./random.js');
 const retweet = () => {
 
     let params = {
-		q: '#Reactjs, #javaScript, #Nodejs, #express, #Redux, #MERN',
-		result_type: 'recent',
-		lang: 'en'
+		q: '#Reactjs, #javaScript, #Nodejs, #express, #mongodb',
+		result_type: 'recent'
 	}
 
     // Search specific tweets
