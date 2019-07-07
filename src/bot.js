@@ -4,8 +4,8 @@ const bot = new twit(config.key);
 
 
 //Api
-const favorite = require("./api/favorite");
-setInterval(favorite, 1000)
+const favorite = require("./features/favorite");
+setInterval(favorite, 100000)
 
 
 
