@@ -26,8 +26,6 @@ const favorite =  () => {
 			console.error(`Error: ${error}`)
 		} else {
 		
-			 
-
 			bot.post('favorites/create', 
 			{
 				id: tweet.id_str
