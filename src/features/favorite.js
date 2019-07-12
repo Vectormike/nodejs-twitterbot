@@ -6,9 +6,9 @@ const random = require('./random');
 const favorite =  () => {
 
 	let params = {
-		q: '#reactjs OR React #javaScript OR javaScript OR nodejs OR #nodejs OR express OR #express OR Redux OR #Redux',
-		result_type: 'recent',
-		lang: 'en'
+		q: '#Reactjs OR #javaScript OR #Nodejs OR #express OR #mongodb',
+		lang: 'en',
+		count: 500
 	}
 
 

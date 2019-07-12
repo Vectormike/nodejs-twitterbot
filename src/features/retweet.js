@@ -6,8 +6,9 @@ const random = require('./random.js');
 const retweet = () => {
 
     let params = {
-		q: '#Reactjs OR #javaScript OR #Nodejs OR #express OR #mongodb',
+		q: '#Reactjs OR #javaScript OR #Nodejs OR #Express OR #mongodb',
         result_type: 'recent',
+        lang: 'en',
         count: 500
 	}
 
