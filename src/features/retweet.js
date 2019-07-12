@@ -8,8 +8,7 @@ const retweet = () => {
     let params = {
 		q: '#Reactjs OR #javaScript OR #Nodejs OR #Express OR #mongodb',
         result_type: 'recent',
-        lang: 'en',
-        count: 500
+        lang: 'en'
 	}
 
     // Search specific tweets
