@@ -4,7 +4,7 @@ const favorite = require("./features/favorite");
 setInterval(favorite, 100000)
 
 const retweet = require('./features/retweet');
-setInterval(retweet, 90000)
+setInterval(retweet, 1000000)
 
 const post = require('./features/posts');
 // post();
