@@ -3,13 +3,13 @@ const config = require("./config");
 const bot = new twit(config.key);
 //Api
 const favorite = require("./features/favorite");
-setInterval(favorite, 1000);
+setInterval(favorite, 10000);
 
 const retweet = require("./features/retweet");
 setInterval(retweet, 100000);
 
 const post = require("./features/posts");
-setInterval(post, 1000);
+setInterval(post, 1000 * 60 * 60 * 24);
 
 // const autodm = require("./features/autodm");
 // autodm();
