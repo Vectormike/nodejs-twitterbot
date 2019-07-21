@@ -8,6 +8,10 @@ const posts = () => {
 
         // Select posts at random
         let tweet = random(status)
+        
+
+        // Fn to delete status if immediately it's tweeted
+    
 
         // Post status from a an array
         bot.post('statuses/update', 
