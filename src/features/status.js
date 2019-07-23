@@ -14,5 +14,6 @@ module.exports = [
   "Things aren’t always #000000 and #FFFFFF",
   "One man’s crappy software is another man’s full time job.",
   "Programming is like sex. One mistake and you have to support it for the rest of your life.",
-  "If Internet Explorer is brave enough to ask to be your default browser, You are brave enough to ask that girl out."
+  "If Internet Explorer is brave enough to ask to be your default browser, You are brave enough to ask that girl out.",
+  "Change your mindset. The more challenges you come across & resolve, the more you grow! Very key!"
 ];
