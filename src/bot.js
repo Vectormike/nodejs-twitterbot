@@ -8,8 +8,8 @@ setInterval(favorite, 100000);
 const retweet = require("./features/retweet");
 setInterval(retweet, 100000);
 
-const post = require("./features/posts");
-setInterval(post, 1000 * 60 * 60 * 24);
+const posts = require("./features/posts");
+setInterval(posts, 432000000);
 
 // const autodm = require("./features/autodm");
 // autodm();
