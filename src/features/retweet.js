@@ -4,10 +4,8 @@ const bot = new twit(config.key);
 const random = require("./random.js");
 
 const retweet = () => {
-  //q: '#Reactjs OR #javaScript OR #Nodejs OR @Vectormike_ OR @iambolajiayo'
-
   let params = {
-    q: "#uniuyoisnotsafe",
+    q: "#Reactjs OR #javaScript OR #Nodejs OR @Vectormike_ OR @iambolajiayo",
     result_type: "recent",
     lang: "en"
   };
