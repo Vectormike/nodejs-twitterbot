@@ -1,45 +1,45 @@
-const twit = require('twit');
-const config = require('../config');
+const twit = require("twit");
+const config = require("../config");
 const bot = new twit(config.key);
-const random = require('./random.js');
+const random = require("./random.js");
 
 const retweet = () => {
+  //q: '#Reactjs OR #javaScript OR #Nodejs OR @Vectormike_ OR @iambolajiayo'
 
-    let params = {
-		q: '#Reactjs OR #javaScript OR #Nodejs OR @Vectormike_ OR @iambolajiayo',
-        result_type: 'recent',
-        lang: 'en'
-	}
+  let params = {
+    q: "#uniuyoisnotsafe",
+    result_type: "recent",
+    lang: "en"
+  };
 
-    // Search specific tweets
-    bot.get('search/tweets', params,
+  // Search specific tweets
+  bot.get("search/tweets", params, (err, data) => {
+    let tweets = data.statuses;
+
+    // Pick a random tweet
+    let tweet = random(tweets);
+    console.log(tweet.id_str);
+
+    if (err) {
+      console.log(err);
+    } else {
+      // Retweet
+      bot.post(
+        "statuses/retweet/:id",
+        {
+          id: tweet.id_str
+        },
         (err, data) => {
-
-            let tweets = data.statuses;
-            
-            // Pick a random tweet
-    		let tweet = random(tweets);
-	    	console.log(tweet.id_str);
-
-            if (err) {
-                console.log(err);
-            } else {
-            
-            // Retweet
-            bot.post('statuses/retweet/:id', {
-                    id: tweet.id_str
-                }, (err, data) => {
-                    if (err) {
-                        console.log(err)
-                    } else {
-                        console.log(`I just retweeted => ${data.text}`)
-                    }
-                }
-            )}
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(`I just retweeted => ${data.text}`);
+          }
         }
-    )
-   
-}
+      );
+    }
+  });
+};
 
 module.exports = retweet;
 
