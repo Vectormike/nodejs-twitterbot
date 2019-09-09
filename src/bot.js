@@ -6,10 +6,10 @@ const favorite = require("./features/favorite");
 setInterval(favorite, 100000);
 
 const retweet = require("./features/retweet");
-setInterval(retweet, 100000);
+setInterval(retweet, 1000000);
 
 const posts = require("./features/posts");
-setInterval(posts, 432000000);
+setInterval(posts, 43200000);
 
 const followback = require("./features/followback");
 // followback();
