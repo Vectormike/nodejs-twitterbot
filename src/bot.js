@@ -9,10 +9,10 @@ const retweet = require("./features/retweet");
 setInterval(retweet, 1000000);
 
 const posts = require("./features/posts");
-setInterval(posts, 43200000);
+setInterval(posts, 10000000);
 
 const followback = require("./features/followback");
-// followback();
+setInterval(followback, 100000);
 // const autodm = require("./features/autodm");
 // autodm();
 
