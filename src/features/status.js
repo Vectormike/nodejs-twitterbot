@@ -15,5 +15,7 @@ module.exports = [
   "One man’s crappy software is another man’s full time job.",
   "Programming is like sex. One mistake and you have to support it for the rest of your life.",
   "If Internet Explorer is brave enough to ask to be your default browser, You are brave enough to ask that girl out.",
-  "Change your mindset. The more challenges you come across & resolve, the more you grow! Very key!"
+  "Change your mindset. The more challenges you come across & resolve, the more you grow! Very key!",
+  "Since it takes around 10 years for a programming language or database to gain mass popularity I wonder which ones today are going to boom tomorrow. What are your guesses?",
+  "There'll be an avalanche of good news and goodness this week. I believe it, I receive it."
 ];
