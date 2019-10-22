@@ -12,7 +12,7 @@ const posts = require("./features/posts");
 setInterval(posts, 10000000);
 
 const followback = require("./features/followback");
-setInterval(followback, 100000);
+setInterval(followback, 1000000);
 // const autodm = require("./features/autodm");
 // autodm();
 
