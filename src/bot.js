@@ -9,7 +9,7 @@ const retweet = require("./features/retweet")
 setInterval(retweet, 50000)
 
 const posts = require("./features/posts")
-setInterval(posts, 10000000)
+setInterval(posts, 1000000)
 
 const followback = require("./features/followback")
 setInterval(followback, 1000000)
