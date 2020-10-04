@@ -1,45 +1,45 @@
-const twit = require("twit");
-const config = require("../config");
-const bot = new twit(config.key);
-const random = require("./random.js");
+const twit = require("twit")
+const config = require("../config")
+const bot = new twit(config.key)
+const random = require("./random.js")
 
 const retweet = () => {
   let params = {
-    q: "#Reactjs OR #javaScript OR #Nodejs OR @Vectormike_ OR @iambolajiayo",
+    q: "#EndSARS OR #EndSarsNow",
     result_type: "recent",
-    lang: "en"
-  };
+    lang: "en",
+  }
 
   // Search specific tweets
   bot.get("search/tweets", params, (err, data) => {
-    let tweets = data.statuses;
+    let tweets = data.statuses
 
     // Pick a random tweet
-    let tweet = random(tweets);
-    console.log(tweet.id_str);
+    let tweet = random(tweets)
+    console.log(tweet.id_str)
 
     if (err) {
-      console.log(err);
+      console.log(err)
     } else {
       // Retweet
       bot.post(
         "statuses/retweet/:id",
         {
-          id: tweet.id_str
+          id: tweet.id_str,
         },
         (err, data) => {
           if (err) {
-            console.log(err);
+            console.log(err)
           } else {
-            console.log(`I just retweeted => ${data.text}`);
+            console.log(`I just retweeted => ${data.text}`)
           }
         }
-      );
+      )
     }
-  });
-};
+  })
+}
 
-module.exports = retweet;
+module.exports = retweet
 
 // Search specific tweets
 // Pick at random
