@@ -13,7 +13,7 @@ const posts = () => {
   // Post status from a an array
   bot.post("statuses/update", { status: tweet }, (err, data) => {
     if (err) {
-      console.log(err);
+      // console.log(err);
     } else {
       console.log(`I tweeted => ${data.text}`);
     }

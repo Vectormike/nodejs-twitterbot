@@ -5,7 +5,7 @@ const random = require("./random.js")
 
 const retweet = () => {
   let params = {
-    q: "#EndSARS OR #EndSarsNow",
+    q: "#SARSMUSTEND OR #EndSARS",
     result_type: "recent",
     lang: "en",
   }
@@ -16,10 +16,10 @@ const retweet = () => {
 
     // Pick a random tweet
     let tweet = random(tweets)
-    console.log(tweet.id_str)
+    // console.log(tweet.id_str)
 
     if (err) {
-      console.log(err)
+      // console.log(err)
     } else {
       // Retweet
       bot.post(
@@ -29,7 +29,7 @@ const retweet = () => {
         },
         (err, data) => {
           if (err) {
-            console.log(err)
+            // console.log(err)
           } else {
             console.log(`I just retweeted => ${data.text}`)
           }

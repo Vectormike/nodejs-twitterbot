@@ -7,6 +7,7 @@ const favorite = () => {
   let params = {
     q: "#EndSARS OR #EndSarsNow",
     lang: "en",
+    result_type: "recent",
     count: 500,
   }
 
@@ -16,10 +17,10 @@ const favorite = () => {
 
     // Pick a random tweet
     let tweet = random(tweets)
-    console.log(tweet.id_str)
+    // console.log(tweet.id_str)
 
     if (err) {
-      console.error(`Error: ${error}`)
+      // console.error(`Error: ${error}`)
     } else {
       bot.post(
         "favorites/create",
@@ -29,7 +30,7 @@ const favorite = () => {
 
         (err, data) => {
           if (err) {
-            console.log(err)
+            // console.log(err)
           } else {
             console.log(`I just liked => ${data.text}`)
           }
