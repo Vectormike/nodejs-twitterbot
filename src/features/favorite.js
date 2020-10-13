@@ -5,7 +5,7 @@ const random = require("./random")
 
 const favorite = () => {
   let params = {
-    q: "#EndSARS OR #EndSarsNow",
+    q: "#UyoProtest OR #UyoProtests",
     lang: "en",
     result_type: "recent",
     count: 500,

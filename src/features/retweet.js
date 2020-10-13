@@ -7,7 +7,6 @@ const retweet = () => {
   let params = {
     q: "#UyoProtest OR #UyoProtests",
     result_type: "recent",
-    lang: "en",
   }
 
   // Search specific tweets
