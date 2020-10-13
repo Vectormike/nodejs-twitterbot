@@ -5,7 +5,8 @@ const random = require("./random.js")
 
 const retweet = () => {
   let params = {
-    q: "#UyoProtest",
+    q: "#UyoProtest OR #UyoProtests",
+    result_type: "recent",
     lang: "en",
   }
 
